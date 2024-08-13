@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <title>Register Page</title>
+    <link rel="stylesheet" href="styleDocs/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-container" > 
+            <div style="display: flex; flex-direction: column; margin-top: 120px;">
+                <label for="userName">User Name</label>
+                <input type="text" id="userName" name="userName" required>
+                
+                <label for="userEmail">User Email</label>
+                <input type="email" id="userEmail" name="userEmail" required>
+                
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+                
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+            
+                
+                <label for="addressType">Address Type</label>
+                <select id="addressType" name="addressType" required>
+                    <option value="0">Home</option>
+                    <option value="1">Work</option>
+                    <option value="2">Other</option>
+                </select>
+                
+                <label for="address">Address</label>
+                <textarea id="address" name="address" rows="3" required></textarea>
+                
+                <label for="addressTitle">Address Title</label>
+                <input type="text" id="addressTitle" name="addressTitle" required>
+                <p style="text-align: center;">Already registered? <a href="loginPage.html">Login Here</a></p>
+                <p style="text-align: center;"><a href="Home.html">Go Home</a></p>
+
+                <button id="myButton2">Register</button>
+            </div>
+                
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    document.getElementById("myButton2").addEventListener("click",registerationSubmit);
+    function registerationSubmit()
+    {
+        const userName=document.getElementById("userName").value;
+        const userEmail=document.getElementById("userEmail").value;
+        const password=document.getElementById("password").value;
+        const confirmPassword=document.getElementById("confirmPassword").value;
+        const addressType=document.getElementById("addressType").value;
+        const address=document.getElementById("address").value;
+        const addressTitle=document.getElementById("addressTitle").value;
+        
+        const body2 = {
+        userName: userName ,
+        userEmail:userEmail,
+        password: password,
+        confirmPassword: confirmPassword,
+        addressType: +addressType,
+        address: address,
+        addressTitle:addressTitle 
+    }
+    console.log(body2, "body")
+    axios.post(`http://localhost:5240/api/User/Register`, body2).then((res)=>{
+            console.log(res,"register response")
+            window.alert("Registration is Successfull!")
+
+           // localStorage.setItem('jwtToken', JSON.stringify(res.data.token)) bu sefer tokene ihtiya yk
+
+        }).catch((error)=>{
+            console.log(error,"register error")
+        }).finally(()=>{
+
+        })
+    
+    }
+
+
+</script>

@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\Application",
+    "\\Application\\Contracts",
+    "\\Domain",
+    "\\Domain\\Entities",
+    "\\Infrastructure",
+    "\\Infrastructure\\Repositories",
+    "\\UserInterface",
+    "\\WebApi",
+    "\\WebApi\\Controllers"
+  ],
+  "SelectedNode": "\\WebApi\\WebApi.http",
+  "PreviewInSolutionExplorer": false
+}

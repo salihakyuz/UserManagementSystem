@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styleDocs/dashBoard.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Welcome!</h2>
+        <p id="userNameSection" style="text-align: center;"></p>
+        <hr>
+        <ul>
+            <li><a href="adminDashboard.html"><b>Dashboard</b> </a></li>
+            <li><a href="getAllUser.html"> Get All Users</a></li>
+            <li><a href="getUserAddress.html"> Get User Adresses</a></li>
+            <li><a href="waterForecastForAdmin.html"><b>Get WaterForecast</b> </a></li>
+
+            <button class="logoutBut" id="logoutButton">Logout</button>
+        </ul>
+    </div>
+    <div class="content">
+        <img src="../UserInterface/img/website-construction.jpg" alt="">
+    </div>
+
+    <script>
+
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const email = localStorage.getItem('UserEmail'); // Use the correct key
+            if (email) {
+                document.getElementById('userNameSection').textContent = email;
+                }
+            });
+
+
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('jwtToken');
+            localStorage.removeItem('UserEmail');
+            window.location.href = 'Home.html';
+        });
+        console.log(window.location.href)
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('jwtToken');
+            if (!token) {
+                window.location.href = 'loginPage.html';
+            } else {
+             //   getAllUsersFunc()
+            }
+        });
+
+      
+    </script>
+</body>
+</html>

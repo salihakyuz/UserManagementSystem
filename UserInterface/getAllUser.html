@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styleDocs/dashBoard.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Welcome!</h2>
+        
+        <p id="userNameSection" style="text-align: center;"></p>
+        <hr>
+        <ul>
+            <li><a href="adminDashboard.html"><b>Dashboard</b> </a></li>
+            <li><a href="getAllUser.html"> Get All Users</a></li>
+            <li><a href="getUserAddress.html"> Get User Adresses</a></li>
+            <li><a href="waterForecastForAdmin.html"><b>Get WaterForecast</b> </a></li>
+
+            
+            <button class="logoutBut" id="logoutButton">Logout</button>
+        </ul>
+    </div>
+    <div class="content">
+        <table id="userList" class="tabledesign" style="display: none;">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Role</th>
+                    <th>Edit</th>
+                </tr>
+            </thead>
+            <tbody id="userTableBody">
+                <!-- Users will be dynamically inserted here -->
+            </tbody>
+        </table>
+        <!-- Popup Modal for Editing User -->
+        <div id="editUserModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Edit User Role</h2>
+                <form id="editUserForm">
+                    <input type="hidden" id="editUserId">
+                    <label for="editUserRole">Role:</label>
+                    <select id="editUserRole">
+                        <option value="0">Basic</option>
+                        <option value="1">Admin</option>
+                    </select><br><br>
+                    <button type="button" id="saveUserButton">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function(){
+            const email= localStorage.getItem('UserEmail');
+            if(email){
+                document.getElementById('userNameSection').textContent=email;
+            }
+        });
+
+        //logout butonu işlemleri
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('jwtToken');
+            localStorage.removeItem('UserEmail');
+            window.location.href = 'Home.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('jwtToken');
+            if (!token) {
+                window.location.href = 'loginPage.html';
+            } else {
+                getAllUsers();
+            }
+        });
+
+        function getAllUsers() {
+            const token = localStorage.getItem('jwtToken');
+            axios.get('http://localhost:5240/api/UserManagement/all', {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            .then(function (response) {
+                const users = response.data;
+                const userTableBody = document.getElementById('userTableBody');
+                userTableBody.innerHTML = '';
+                users.forEach(user => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${user.id}</td>
+                        <td>${user.userName}</td>
+                        <td>${user.userEmail}</td>
+                        <td>${user.roleType}</td>
+                        <td>
+                            <button class="editButton tableButton" data-id="${user.id}" data-role="${user.roleType}">Edit</button>
+                            <button class="deleteButton tableButton" data-id="${user.id}">delete</button>
+                        </td>
+                        
+                                                
+                    `;
+                    userTableBody.appendChild(row);
+                });
+
+                //kullanıcı silme butonu 
+
+                document.getElementById('userList').style.display = 'table';
+
+
+                // Add event listeners to edit buttons
+                document.querySelectorAll('.editButton').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const userId = this.getAttribute('data-id');
+                        const userRole = this.getAttribute('data-role');
+                        openEditModal(userId, userRole);
+                    });
+                });
+
+                 // Add event listeners to the delete buttons
+                document.querySelectorAll('.deleteButton').forEach(button => {
+                    button.addEventListener('click', function() {
+                        const userId = this.getAttribute('data-id');
+                        deleteUser(userId);
+                        alert("silme işlemi başarılı");
+                    });
+
+                 });
+
+            })
+            .catch(function (error) {
+                console.error('Error fetching users:', error);
+                alert('Failed to fetch users. Please try again.');
+            });
+        }
+
+        function openEditModal(userId, userRole) {
+            document.getElementById('editUserId').value = userId;
+            document.getElementById('editUserRole').value = userRole;
+            document.getElementById('editUserModal').style.display = 'block';
+        }    
+        
+        function deleteUser(userId) {
+        const token = localStorage.getItem('jwtToken');
+        axios.delete(`http://localhost:5240/api/UserManagement/${userId}`, {
+            headers: {
+                'Authorization': `Bearer ${token}`
+            }
+        })
+        .then(function () {
+            // Remove the user row from the table
+            const userRow = document.querySelector(`.deleteButton[data-id="${userId}"]`).closest('tr');
+            userRow.remove();
+        })
+        .catch(function (error) {
+            console.error('Error deleting user:', error);
+            alert('Failed to delete user. Please try again.');
+        });
+    }
+     // Save the updated role
+     document.getElementById('saveUserButton').addEventListener('click', function() {
+            const userId = document.getElementById('editUserId').value;
+            const newRole = document.getElementById('editUserRole').value;
+            updateUserRole(userId, newRole);
+        });
+        function updateUserRole(userId, newRole) {  
+            
+            const token = localStorage.getItem('jwtToken');
+            axios.put(`http://localhost:5240/api/UserManagement/${userId}/${newRole}`, null, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            .then(function () {
+                alert('User role updated successfully!');
+                document.getElementById('editUserModal').style.display = 'none';
+                getAllUsers();
+                
+                // Optionally, reload the entire page to ensure everything is up to date
+                window.location.reload();
+
+            })
+            .catch(function (error) {
+                console.error('Error updating user role:', error);
+                alert('Failed to update user role. Please try again.');
+            });
+        }
+        // Close the modal when the user clicks the "close" button or outside the modal
+        document.querySelector('.close').addEventListener('click', function() {
+            document.getElementById('editUserModal').style.display = 'none';
+        });
+
+        window.addEventListener('click', function(event) {
+            const modal = document.getElementById('editUserModal');
+            if (event.target == modal) {
+                modal.style.display = 'none';
+            }
+        });
+
+    </script>

@@ -1,0 +1,60 @@
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: #2c3e50;
+}
+
+.navbar .logo {
+    float: left;
+    color: #f7f7f7;
+    text-align: center;
+    padding: 5px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.hero .hero_inside{
+    border-radius: 30px;
+    background-color:rgba(0,0,0,0.9) ;
+    padding: 2%;
+}
+.hero p{
+    color: white;
+    width:max-content;
+}
+.navbar .menu {
+    float: right;
+}
+
+.hero h1{
+    background-color: #34495e;
+}
+
+.navbar .menu a {
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.navbar .menu a:hover {
+    background-color: #34495e;
+    color: rgb(255, 255, 255);
+}
+
+.homeimg{
+    width: 40%;
+    margin-left: 30%;
+}

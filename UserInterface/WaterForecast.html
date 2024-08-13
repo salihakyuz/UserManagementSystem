@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styleDocs/dashBoardBasic.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Welcome!</h2>
+        
+        <p id="userNameSection" style="text-align: center;"></p>
+        <hr>
+        <ul>
+            <li><a href="dashBoard.html"><b>Dashboard</b> </a></li>
+            <li><a href="WaterForecast.html"><b>Get WaterForecast</b> </a></li>
+            <button class="logoutBut" id="logoutButton">Logout</button>
+        </ul>
+    </div>
+    <div class="content">
+        <table id="WforecastList" class="tabledesign" style="display: none;">
+            <thead>
+                <tr>
+                    <th>date</th>
+                    <th>temperatureC</th>
+                    <th>temperatureF</th>
+                    <th>summary</th>
+                </tr>
+            </thead>
+            <tbody id="WforecastBody">
+                <!-- Users will be dynamically inserted here -->
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
+<script>
+            document.addEventListener('DOMContentLoaded', function() {
+            const email = localStorage.getItem('UserEmail'); // Use the correct key
+            if (email) {
+                document.getElementById('userNameSection').textContent = email;
+                }
+            });
+
+    //logout butonu işlemleri
+    document.getElementById('logoutButton').addEventListener('click', function() {
+        localStorage.removeItem('jwtToken');
+        localStorage.removeItem('UserEmail');
+        window.location.href = 'Home.html';
+    });
+
+    document.addEventListener('DOMContentLoaded', function() {
+        const token = localStorage.getItem('jwtToken');
+        if (!token) {
+            window.location.href = 'loginPage.html';
+        } else {
+            getAllForecast();
+        }
+    });
+
+    function getAllForecast() {
+    const token = localStorage.getItem('jwtToken');
+    axios.get('http://localhost:5240/WeatherForecast', {
+        headers: {
+            'Authorization': `Bearer ${token}`
+        }
+    })
+    .then(function (response) {
+        const forecasts = response.data;
+        const wForecastBody = document.getElementById('WforecastBody');
+        wForecastBody.innerHTML = ''; // Tablonun içeriğini temizle
+
+        forecasts.forEach(function(forecast) {
+            const row = document.createElement('tr');
+
+            const dateCell = document.createElement('td');
+            dateCell.textContent = forecast.date;
+            row.appendChild(dateCell);
+
+            const tempCCell = document.createElement('td');
+            tempCCell.textContent = forecast.temperatureC;
+            row.appendChild(tempCCell);
+
+            const tempFCell = document.createElement('td');
+            tempFCell.textContent = forecast.temperatureF;
+            row.appendChild(tempFCell);
+
+            const summaryCell = document.createElement('td');
+            summaryCell.textContent = forecast.summary;
+            row.appendChild(summaryCell);
+
+            wForecastBody.appendChild(row);
+        });
+
+        document.getElementById('WforecastList').style.display = 'table'; // Tabloyu göster
+    })
+    .catch(function (error) {
+        console.error('Error fetching forecasts:', error);
+        alert('Failed to fetch forecasts.');
+    });
+}
+
+</script>

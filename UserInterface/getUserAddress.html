@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="styleDocs/dashBoard.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <style>
+        .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 800px;
+    height: 730px;
+}
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>Welcome!</h2>
+        <p id="userNameSection" style="text-align: center;"></p>
+        <hr>
+        <ul>
+            <li><a href="adminDashboard.html"><b>Dashboard</b> </a></li>
+            <li><a href="getAllUser.html"> Get All Users</a></li>
+            <li><a href="getUserAddress.html"> Get User Adresses</a></li>
+            <li><a href="waterForecastForAdmin.html"><b>Get WaterForecast</b> </a></li>
+
+            <button class="logoutBut" id="logoutButton">Logout</button>
+        </ul>
+    </div>
+    <div class="content">
+        <div class="section">
+            <p style="padding: 50px; ">Buradan kullanıcı adres tipini seçebilirsiniz</p>
+            <select id="addressTypeDropdown">
+                <option value="0">Home</option>
+                <option value="1">Office</option>
+                <option value="2">Other</option>
+
+            </select>
+            <button id="getAdress">Get</button>
+        </div>
+        <table class="addressTable" id="userAddressList" style="display: none;">
+            <thead>
+                <tr>
+                    <th>id</th>
+                    <th>userName</th>
+                    <th>title</th>
+                    <th>type</th>
+                    <th>address</th>
+                </tr>
+            </thead>
+            <tbody id="userAddressTableBody"></tbody>
+        </table>
+    </div>
+
+    <script>
+            document.addEventListener('DOMContentLoaded', function(){
+            const email= localStorage.getItem('UserEmail');
+            if(email){
+                document.getElementById('userNameSection').textContent=email;
+            }
+        });
+
+        document.getElementById('logoutButton').addEventListener('click', function() {
+            localStorage.removeItem('jwtToken');
+            localStorage.removeItem('UserEmail');
+            window.location.href = 'Home.html';
+        });
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const token = localStorage.getItem('jwtToken');
+            if (!token) {
+                window.location.href = 'loginPage.html';
+            }
+        });
+
+        document.getElementById('getAdress').addEventListener('click', function(event) {
+            event.preventDefault();
+            const token = localStorage.getItem('jwtToken');
+            const selectedAddressType = document.getElementById('addressTypeDropdown').value;
+            axios.get(`http://localhost:5240/api/UserManagement/address/${selectedAddressType}`, {
+                headers: {
+                    'Authorization': `Bearer ${token}`
+                }
+            })
+            .then(function (response) {
+                const addresses = response.data;
+                const userAddressTableBody = document.getElementById('userAddressTableBody');
+                userAddressTableBody.innerHTML = '';
+                addresses.forEach(address => {
+                    const row = document.createElement('tr');
+                    row.innerHTML = `
+                        <td>${address.id}</td>
+                        <td>${address.userName}</td>
+                        <td>${address.title}</td>
+                        <td>${address.type}</td>
+                        <td>${address.address}</td>
+                    `;
+                    userAddressTableBody.appendChild(row);
+                });
+                document.getElementById('userAddressList').style.display = 'table';
+            })
+            .catch(function (error) {
+                console.error('Error fetching addresses:', error);
+                alert('Failed to fetch addresses. Please try again.');
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,351 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{0F341E88-2415-41B4-A616-5B74A7D6BAD0}|WebApi\\WebApi.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{0F341E88-2415-41B4-A616-5B74A7D6BAD0}|WebApi\\WebApi.csproj|solutionrelative:webapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F341E88-2415-41B4-A616-5B74A7D6BAD0}|WebApi\\WebApi.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F341E88-2415-41B4-A616-5B74A7D6BAD0}|WebApi\\WebApi.csproj|solutionrelative:webapi\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F341E88-2415-41B4-A616-5B74A7D6BAD0}|WebApi\\WebApi.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\webapi\\controllers\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F341E88-2415-41B4-A616-5B74A7D6BAD0}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\usermanagement.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{0F341E88-2415-41B4-A616-5B74A7D6BAD0}|WebApi\\WebApi.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{0F341E88-2415-41B4-A616-5B74A7D6BAD0}|WebApi\\WebApi.csproj|solutionrelative:webapi\\controllers\\usercontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\infrastructure\\repositories\\userrepostory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\repositories\\userrepostory.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\application\\contracts\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|solutionrelative:application\\contracts\\iuser.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D60DD5-E73A-4912-BF69-829866F405FC}|Domain\\Domain.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D60DD5-E73A-4912-BF69-829866F405FC}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\user.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/WebApiDatabase/True/SqlTable/dbo.Users.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\application\\dtos\\useraddressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|solutionrelative:application\\dtos\\useraddressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D60DD5-E73A-4912-BF69-829866F405FC}|Domain\\Domain.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\domain\\entities\\useradress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D60DD5-E73A-4912-BF69-829866F405FC}|Domain\\Domain.csproj|solutionrelative:domain\\entities\\useradress.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/WebApiDatabase/True/SqlTable/dbo.Adresses.sql||{0058A1F7-65F3-4DB9-B3D0-CA7E64DD73CD}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{99D60DD5-E73A-4912-BF69-829866F405FC}|Domain\\Domain.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\domain\\enums\\addressenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{99D60DD5-E73A-4912-BF69-829866F405FC}|Domain\\Domain.csproj|solutionrelative:domain\\enums\\addressenum.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\application\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|solutionrelative:application\\dtos\\logindto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\infrastructure\\dependencyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\dependencyinjection\\servicecontainer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\data\\appdbcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\application\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|solutionrelative:application\\dtos\\registeruserdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\application\\dtos\\registrationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|solutionrelative:application\\dtos\\registrationresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\application\\dtos\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{606D6A42-72A8-47AA-96B7-7346CD80E05C}|Application\\Application.csproj|solutionrelative:application\\dtos\\loginresponse.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\infrastructure\\migrations\\20240802062010_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20240802062010_second.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\infrastructure\\migrations\\20240802093032_fourth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20240802093032_fourth.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|c:\\users\\fair teknoloji\\source\\repos\\miniproject\\infrastructure\\migrations\\20240802071400_third.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7BC6B096-04B1-46E9-8D3E-69CFB271018C}|Infrastructure\\Infrastructure.csproj|solutionrelative:infrastructure\\migrations\\20240802071400_third.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "launchSettings.json",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\WebApi\\Properties\\launchSettings.json",
+              "RelativeDocumentMoniker": "WebApi\\Properties\\launchSettings.json",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\WebApi\\Properties\\launchSettings.json",
+              "RelativeToolTip": "WebApi\\Properties\\launchSettings.json",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABIAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2024-08-13T10:38:50.597Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "UserAdress.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Domain\\Entities\\UserAdress.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\UserAdress.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Domain\\Entities\\UserAdress.cs",
+              "RelativeToolTip": "Domain\\Entities\\UserAdress.cs",
+              "ViewState": "AQIAAAMAAAAAAAAAAAAuwAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:33:48.021Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "User.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Domain\\Entities\\User.cs",
+              "RelativeDocumentMoniker": "Domain\\Entities\\User.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Domain\\Entities\\User.cs",
+              "RelativeToolTip": "Domain\\Entities\\User.cs",
+              "ViewState": "AQIAAAUAAAAAAAAAAADwvw8AAAAuAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:18:39.743Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "IUser.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\Contracts\\IUser.cs",
+              "RelativeDocumentMoniker": "Application\\Contracts\\IUser.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\Contracts\\IUser.cs",
+              "RelativeToolTip": "Application\\Contracts\\IUser.cs",
+              "ViewState": "AQIAAAcAAAAAAAAAAAA1wA4AAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T12:51:36.095Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "UserManagement.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\WebApi\\Controllers\\UserManagement.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\UserManagement.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\WebApi\\Controllers\\UserManagement.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\UserManagement.cs",
+              "ViewState": "AQIAABIAAAAAAAAAAAAqwBwAAAAiAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:24:49.607Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "UserRepostory.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Repositories\\UserRepostory.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Repositories\\UserRepostory.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Repositories\\UserRepostory.cs",
+              "RelativeToolTip": "Infrastructure\\Repositories\\UserRepostory.cs",
+              "ViewState": "AQIAAJIAAAAAAAAAAADwv50AAAAYAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T12:38:44.666Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "dbo.Users [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/WebApiDatabase/True/SqlTable/dbo.Users.sql",
+              "ToolTip": "dbo.Users [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-08-02T07:14:46.912Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\WebApi\\Program.cs",
+              "RelativeDocumentMoniker": "WebApi\\Program.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\WebApi\\Program.cs",
+              "RelativeToolTip": "WebApi\\Program.cs",
+              "ViewState": "AQIAAEUAAAAAAAAAAAAAwE8AAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T13:22:51.801Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "20240802093032_Fourth.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Migrations\\20240802093032_Fourth.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20240802093032_Fourth.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Migrations\\20240802093032_Fourth.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20240802093032_Fourth.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T09:30:32.58Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "UserController.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\WebApi\\Controllers\\UserController.cs",
+              "RelativeDocumentMoniker": "WebApi\\Controllers\\UserController.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\WebApi\\Controllers\\UserController.cs",
+              "RelativeToolTip": "WebApi\\Controllers\\UserController.cs",
+              "ViewState": "AQIAAB8AAAAAAAAAAAAQwCMAAAAJAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T12:46:45.814Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "UserAddressDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\UserAddressDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\UserAddressDTO.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\UserAddressDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\UserAddressDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAKAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:55:00.68Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "dbo.Adresses [Data]",
+              "DocumentMoniker": "ViewDataWindow_MSSQL__/_localdb__MSSQLLocalDB/WebApiDatabase/True/SqlTable/dbo.Adresses.sql",
+              "ToolTip": "dbo.Adresses [Data]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2024-08-02T09:09:02.378Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AddressEnum.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Domain\\Enums\\AddressEnum.cs",
+              "RelativeDocumentMoniker": "Domain\\Enums\\AddressEnum.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Domain\\Enums\\AddressEnum.cs",
+              "RelativeToolTip": "Domain\\Enums\\AddressEnum.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAsAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:33:59.442Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "LoginDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\LoginDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\LoginDTO.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\LoginDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\LoginDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:47:06.676Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "20240802071400_Third.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Migrations\\20240802071400_Third.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20240802071400_Third.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Migrations\\20240802071400_Third.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20240802071400_Third.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T07:14:00.266Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "RegisterUserDTO.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\RegisterUserDTO.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\RegisterUserDTO.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\RegisterUserDTO.cs",
+              "RelativeToolTip": "Application\\DTOs\\RegisterUserDTO.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAUAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:35:49.603Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ServiceContainer.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "RelativeToolTip": "Infrastructure\\DependencyInjection\\ServiceContainer.cs",
+              "ViewState": "AQIAAA4AAAAAAAAAAAAQwCoAAAAFAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-01T12:51:54.613Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "AppDbContext.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Data\\AppDbContext.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Data\\AppDbContext.cs",
+              "RelativeToolTip": "Infrastructure\\Data\\AppDbContext.cs",
+              "ViewState": "AQIAAAkAAAAAAAAAAAAAABEAAABTAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T07:06:32.736Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "RegistrationResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\RegistrationResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\RegistrationResponse.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\RegistrationResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\RegistrationResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:47:16.505Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "LoginResponse.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\LoginResponse.cs",
+              "RelativeDocumentMoniker": "Application\\DTOs\\LoginResponse.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Application\\DTOs\\LoginResponse.cs",
+              "RelativeToolTip": "Application\\DTOs\\LoginResponse.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:47:47.385Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "20240802062010_Second.cs",
+              "DocumentMoniker": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Migrations\\20240802062010_Second.cs",
+              "RelativeDocumentMoniker": "Infrastructure\\Migrations\\20240802062010_Second.cs",
+              "ToolTip": "C:\\Users\\Fair Teknoloji\\source\\repos\\MiniProject\\Infrastructure\\Migrations\\20240802062010_Second.cs",
+              "RelativeToolTip": "Infrastructure\\Migrations\\20240802062010_Second.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-08-02T06:20:10.257Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="styleDocs/styles.css">
+</head>
+<body>
+
+    <div class="container">
+        <div class="form-container">
+                <h2>Login</h2>
+                
+                <label for="email">User Email</label>
+                <input id="email" placeholder="Enter Email">
+
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Enter Password">
+                <p style="text-align: center;">Not registered yet? <a href="RegisterPage.html">Register Here</a></p>
+                <p style="text-align: center;"><a href="Home.html">Go Home</a></p>
+
+
+                <button id="myButton">Login</button>
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    document.getElementById("myButton").addEventListener("click", submit);
+    function submit(){
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("password").value;
+    
+        axios.post(`http://localhost:5240/api/User/Login`,{
+            userEmail: email,
+            password: password
+        }) .then(function (response) {
+                if(response.status==200 && response.data.token){
+                        // Login başarılı, token'ı al ve sakla
+                    const token = response.data.token;
+                    const userRole= response.data.roleType;
+                    console.log(response,"Login Response")
+                    localStorage.setItem('jwtToken', token); //json.stringfy yazınca 
+                    localStorage.setItem('UserEmail',email)
+                    
+                    if(userRole===1){
+                        window.location.href="adminDashboard.html";
+                    }
+                    if(userRole==0){
+                    // Kullanıcıyı dashboard sayfasına yönlendir
+                    window.location.href = 'dashboard.html';
+                    }
+                }else{
+                    console.error('unexpected response:', error);
+                    alert('Login failed. Please check your username and password.');                    
+                }
+                
+            })
+            .catch(function (error) {
+                // Hata durumunda kullanıcıya mesaj göster
+                console.error('Login failed:', error);
+                alert('Login failed. Please check your username and password.');
+            });
+        };
+        /*BİR ÖNCEKİ YAPTIĞIMIZ
+        const body = {
+            userEmail: email,
+            password: password
+        }
+        // localStorage.getItem('jwtToken')
+        // debugger
+        axios.post(`http://localhost:5240/api/User/Login`, body).then((res)=>{
+            console.log(res.data.token,"Login Response")
+            localStorage.setItem('jwtToken', JSON.stringify(res.data.token))
+        }).catch((error)=>{
+            console.log(error,"Login Error")
+        }).finally(()=>{
+
+        })
+        
+        
+        */
+
+        // fetch('http://localhost:5240/api/User/Login', {
+        //     method: 'POST', // POST isteği olduğunu belirtiyoruz
+        //     headers: {
+        //         'Content-Type': 'application/json', // JSON formatında veri gönderiyoruz,
+        //         'Access-Control-Allow-Origin': "*"
+        //     },
+        //     body: JSON.stringify(body)
+        // })
+        // .then(response => {
+        //     console.log(response); // API'den gelen veriyi konsola yazdır
+        //     document.getElementById('result').textContent = JSON.stringify(response); // Veriyi ekranda göster
+        // })
+        // .catch(error => {
+        //     console.error('Fetch hatası:', error);
+        //     document.getElementById('result').textContent = 'Veri alınamadı';
+        // });
+
+   // }
+
+</script>
