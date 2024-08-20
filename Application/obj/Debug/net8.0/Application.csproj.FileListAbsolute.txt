@@ -8,6 +8,7 @@ C:\Users\Fair Teknoloji\source\repos\MiniProject\Application\obj\Debug\net8.0\Ap
 C:\Users\Fair Teknoloji\source\repos\MiniProject\Application\obj\Debug\net8.0\Application.AssemblyInfoInputs.cache
 C:\Users\Fair Teknoloji\source\repos\MiniProject\Application\obj\Debug\net8.0\Application.AssemblyInfo.cs
 C:\Users\Fair Teknoloji\source\repos\MiniProject\Application\obj\Debug\net8.0\Application.csproj.CoreCompileInputs.cache
+C:\Users\Fair Teknoloji\source\repos\MiniProject\Application\obj\Debug\net8.0\Application.sourcelink.json
 C:\Users\Fair Teknoloji\source\repos\MiniProject\Application\obj\Debug\net8.0\Applicat.44B5EDA2.Up2Date
 C:\Users\Fair Teknoloji\source\repos\MiniProject\Application\obj\Debug\net8.0\Application.dll
 C:\Users\Fair Teknoloji\source\repos\MiniProject\Application\obj\Debug\net8.0\refint\Application.dll

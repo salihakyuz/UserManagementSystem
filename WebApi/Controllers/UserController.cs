@@ -22,15 +22,25 @@ namespace WebApi.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ActionResult<LoginResponse>> LogUserIn(LoginDTO loginDTO) 
+        public async Task<ActionResult<LoginResponse>> LogUserIn([FromBody ]LoginDTO loginDTO) 
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var result = await user.LoginUserAsync(loginDTO);
             return Ok(result);
         }
 
         [HttpPost("Register")]
-        public async Task<ActionResult<LoginResponse>> RegisterUser(RegisterUserDTO registerUserDTO)
+        public async Task<ActionResult<RegistrationResponse>> RegisterUser([FromBody]RegisterUserDTO registerUserDTO)
         {
+            if (!ModelState.IsValid)
+            {
+                return BadRequest(ModelState);
+            }
+
             var result = await user.RegisterUserAsync(registerUserDTO);
             return Ok(result);
         }

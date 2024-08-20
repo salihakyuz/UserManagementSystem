@@ -50,6 +50,7 @@
 </html>
 
 <script>
+
     document.getElementById("myButton2").addEventListener("click",registerationSubmit);
     function registerationSubmit()
     {
@@ -72,13 +73,13 @@
     }
     console.log(body2, "body")
     axios.post(`http://localhost:5240/api/User/Register`, body2).then((res)=>{
-            console.log(res,"register response")
+            console.log(res.response.data.errors,"register response")
             window.alert("Registration is Successfull!")
 
            // localStorage.setItem('jwtToken', JSON.stringify(res.data.token)) bu sefer tokene ihtiya yk
 
         }).catch((error)=>{
-            console.log(error,"register error")
+            console.log(error.response.data.errors,"register error")
         }).finally(()=>{
 
         })

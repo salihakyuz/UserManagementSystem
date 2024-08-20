@@ -1,6 +1,7 @@
 using Infrastructure.DependencyInjection;
 using Microsoft.OpenApi.Models; //using kullanmadan builder k?sm? ekenemiyor, �ncesinde dependencies k?sm?nda infr. katman?n? ba?lamak gerekiyor
-
+using FluentValidation;
+using FluentValidation.AspNetCore;
 internal class Program
 {
     private static void Main(string[] args)
@@ -10,6 +11,8 @@ internal class Program
         // Add services to the container.
 
         builder.Services.AddControllers();
+        builder.Services.AddFluentValidationAutoValidation();
+        builder.Services.AddValidatorsFromAssemblyContaining<RegisterUserDTOValidator>();
         // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
         builder.Services.AddEndpointsApiExplorer();
 
@@ -75,6 +78,8 @@ internal class Program
 
         app.UseAuthentication();//eklendi 
         app.UseAuthorization();
+
+        app.UseMiddleware<validationMiddleware>();
         app.MapControllers();
 
         app.Run();
