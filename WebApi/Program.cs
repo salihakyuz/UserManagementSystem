@@ -79,7 +79,7 @@ internal class Program
         app.UseAuthentication();//eklendi 
         app.UseAuthorization();
 
-        app.UseMiddleware<validationMiddleware>();
+        //app.UseMiddleware<validationMiddleware>();
         app.MapControllers();
 
         app.Run();

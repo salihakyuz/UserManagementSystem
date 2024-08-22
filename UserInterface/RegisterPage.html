@@ -72,19 +72,14 @@
         addressTitle:addressTitle 
     }
     console.log(body2, "body")
-    axios.post(`http://localhost:5240/api/User/Register`, body2).then((res)=>{
-            console.log(res.response.data.errors,"register response")
-            window.alert("Registration is Successfull!")
-
-           // localStorage.setItem('jwtToken', JSON.stringify(res.data.token)) bu sefer tokene ihtiya yk
-
-        }).catch((error)=>{
-            console.log(error.response.data.errors,"register error")
-        }).finally(()=>{
-
+    axios.post(`http://localhost:5240/api/User/Register`, body2)
+        .then((res) => {
+            console.log(res.data, "register response");
+            window.alert("Registration is Successful!");
         })
-    
+        .catch((error) => {
+            console.log(error.response.data.errors, "register error");
+            window.alert("Registration failed: " + error.response.data.errors.join(", "));
+        });        
     }
-
-
 </script>

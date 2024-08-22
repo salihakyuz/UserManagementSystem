@@ -22,7 +22,7 @@ namespace WebApi.Controllers
         }
 
         [HttpPost("Login")]
-        public async Task<ActionResult<LoginResponse>> LogUserIn([FromBody ]LoginDTO loginDTO) 
+        public async Task<ActionResult<LoginResponse>> LogUserIn([FromBody]LoginDTO loginDTO) 
         {
             if (!ModelState.IsValid)
             {
